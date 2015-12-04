@@ -5,5 +5,5 @@ RUN apk upgrade --update --available && \
     rm -f /var/cache/apk/*
 
 VOLUME ["/app"]
-COPY caddy /caddy
+COPY caddy/caddy /caddy
 CMD ["/caddy", "-conf=/app/Caddyfile"]
