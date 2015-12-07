@@ -1,9 +1,15 @@
 FROM alpine:latest
+MAINTAINER Johannes Mitlmeier <dev.jojomi@yahoo.com>
 
-RUN apk upgrade --update --available && \
-    apk add ca-certificates "openssl>=1.0.2d-r0" && \
-    rm -f /var/cache/apk/*
+ENV CADDY_VERSION=0.8.0
+RUN apk add --update wget ca-certificates && \
+  wget https://github.com/mholt/caddy/releases/download/v${CADDY_VERSION}/caddy_linux_amd64.tar.gz && \
+  tar xzf caddy_linux_amd64.tar.gz && \
+  rm -r caddy_linux_amd64.tar.gz && \
+  apk del wget ca-certificates && \
+  rm /var/cache/apk/*
+
+COPY Caddyfile /app/
 
 VOLUME ["/app"]
-COPY caddy/caddy /caddy
 CMD ["/caddy", "-conf=/app/Caddyfile"]
