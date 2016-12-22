@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Johannes Mitlmeier <dev.jojomi@yahoo.com>
 
-ENV CADDY_VERSION=0.8.2
+ENV CADDY_VERSION=0.9.4
 RUN apk add --update wget ca-certificates && \
   wget https://github.com/mholt/caddy/releases/download/v${CADDY_VERSION}/caddy_linux_amd64.tar.gz && \
   tar xzf caddy_linux_amd64.tar.gz && \
