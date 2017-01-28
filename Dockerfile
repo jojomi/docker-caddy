@@ -7,7 +7,6 @@ RUN apk add --update wget ca-certificates && \
   tar xzf caddy_linux_amd64.tar.gz && \
   rm -r caddy_linux_amd64.tar.gz && \
   mv /caddy_linux_amd64 /caddy && \
-  mv del wget ca-certificates && \
   apk del wget ca-certificates && \
   rm /var/cache/apk/*
 
