@@ -2,7 +2,7 @@
 
 Docker container for serving content using [caddy](https://caddyserver.com).
 
-This docker image contains caddy webserver, version 0.9. This software's license can be found [here](https://github.com/mholt/caddy/blob/master/LICENSE.txt).
+This docker image contains caddy webserver. This software's license can be found [here](https://github.com/mholt/caddy/blob/master/LICENSE.txt).
 
 
 ## Customizing
