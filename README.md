@@ -4,6 +4,10 @@ Docker container for serving content using [caddy](https://caddyserver.com).
 
 This docker image contains caddy webserver. This software's license can be found [here](https://github.com/mholt/caddy/blob/master/LICENSE.txt).
 
+## Building The Image Yourself (optional)
+
+    docker build -t jojomi/caddy:latest .
+
 
 ## Customizing
 
