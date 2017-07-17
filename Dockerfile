@@ -9,6 +9,10 @@ ADD https://github.com/mholt/caddy/releases/download/v${CADDY_VERSION}/caddy_v${
 RUN tar xzf *.tar.gz && \
   rm -r *.tar.gz
 
+RUN apk update \
+    && apk upgrade \
+    && apk add --no-cache ca-certificates
+
 COPY Caddyfile /app/
 
 VOLUME ["/app"]
