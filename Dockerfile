@@ -1,7 +1,7 @@
 # first build the binary so we are compliant with the license
 FROM golang:1.10 as builder
 
-ENV CADDY_VERSION=0.10.13
+ENV CADDY_VERSION=0.10.14
 
 RUN go get -u github.com/mholt/caddy && go get -u github.com/caddyserver/builds
 WORKDIR /go/src/github.com/mholt/caddy/caddy
