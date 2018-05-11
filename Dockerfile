@@ -11,7 +11,7 @@ RUN CGO_ENABLED=0 GOOS=linux go run build.go -goos=linux -goarch=amd64
 
 
 FROM alpine:latest
-MAINTAINER Johannes Mitlmeier <dev.jojomi@yahoo.com>
+LABEL maintainer="Johannes Mitlmeier <dev.jojomi@yahoo.com>"
 
 COPY Caddyfile /app/
 WORKDIR /opt
