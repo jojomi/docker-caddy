@@ -13,7 +13,7 @@ This docker image contains caddy webserver. This software's license can be found
 
 ## Customizing
 
-I decided to keep bare caddy in this image. If you need some of the caddy plugins, you need to fork this repository and follow the steps in `Updating` section.
+I decided to keep bare caddy in this image. If you need some of the caddy plugins, you need to fork this repository and update `caddy_main.go`.
 
 
 ## Updating
