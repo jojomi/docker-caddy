@@ -27,4 +27,4 @@ RUN apk update \
 COPY --from=builder /build/caddy /opt/
 
 VOLUME ["/app"]
-CMD ["/opt/caddy", "-conf=/app/Caddyfile"]
+CMD ["/opt/caddy", "-conf=/app/Caddyfile", '--agree="${ACME_AGREE}"']
