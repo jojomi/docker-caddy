@@ -2,7 +2,7 @@
 # Build instructions here: https://github.com/mholt/caddy#build
 FROM golang:1.12 as builder
 
-ENV CADDY_VERSION=1.0.0
+ENV CADDY_VERSION=1.0.3
 
 ENV GO111MODULE=on
 WORKDIR /build/
