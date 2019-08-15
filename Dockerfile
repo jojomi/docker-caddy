@@ -2,13 +2,13 @@
 # Build instructions here: https://github.com/mholt/caddy#build
 FROM golang:1.12 as builder
 
-ENV CADDY_VERSION=1.0.3
+ENV CADDY_VERSION=1.0.0
 
 ENV GO111MODULE=on
 WORKDIR /build/
 ADD caddy_main.go /build/
 RUN go mod init caddy && \
-    go mod edit -require github.com/mholt/caddy@v${CADDY_VERSION} && \
+    go mod edit -require github.com/caddyserver/caddy@v${CADDY_VERSION} && \
     go build -o caddy && \
     ./caddy --version
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
