@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/mholt/caddy/caddy/caddymain"
+	"github.com/caddyserver/caddy/caddy/caddymain"
 	// plug in plugins here, for example:
 	// _ "import/path/here"
 )

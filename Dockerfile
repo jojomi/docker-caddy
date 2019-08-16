@@ -1,5 +1,5 @@
 # First build the binary so we are compliant with the license
-# Build instructions here: https://github.com/mholt/caddy#build
+# Build instructions here: https://github.com/caddyserver/caddy#build
 FROM golang:1.12 as builder
 
 ENV CADDY_VERSION=1.0.3
